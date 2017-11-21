@@ -1,0 +1,16 @@
+{
+  "name": "class-concepts-implementation",
+  "version": "1.0.0",
+  "description": "Create a class and implememtn OOP Concepts",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "keywords": [
+    "tdd",
+    "oop",
+    "javascript"
+  ],
+  "author": "Patrick Ndifon",
+  "license": "ISC"
+}
