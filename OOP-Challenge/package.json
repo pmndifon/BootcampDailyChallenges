@@ -1,7 +1,7 @@
 {
-  "name": "class-concepts-implementation",
+  "name": "oop-realworld-model",
   "version": "1.0.0",
-  "description": "Create a class and implememtn OOP Concepts",
+  "description": "Model a Real World Scenario Using OOP",
   "main": "app.js",
   "scripts": {
     "test": "mocha test.js"
