@@ -29,7 +29,7 @@ class MobilePhone {
     }
 
     get simSlot() {
-        return this._slimSlot;
+        return this._simSlot;
     }
 }
 
