@@ -1,4 +1,4 @@
-class Mobile {
+class MobilePhone {
     constructor(name, imeiNum, simSlot) {
         // Abstraction
         this._name = name;
@@ -27,11 +27,15 @@ class Mobile {
     get name() {
         return this._name;
     }
+
+    get slimSlot() {
+        return this._slimSlot;
+    }
 }
 
 
 // Inheritance is at play here
-class SmartPhones extends Mobile {
+class SmartPhone extends Mobile {
     constructor(name, imeiNum, batteryLife, camera) {
         super(name, imeiNum, batteryLife);
         this._camera = camera;
@@ -60,4 +64,4 @@ class SmartPhones extends Mobile {
     }
 }
 
-export { Mobile, SmartPhones };
+export { MobilePhone, SmartPhone };

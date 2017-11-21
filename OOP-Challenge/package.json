@@ -4,8 +4,8 @@
   "description": "Model a Real World Scenario Using OOP",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test.js",
-    "build": "build app.js tests/test.js -d lib"
+    "test": "mocha tests/test.js",
+    "build": "babel src tests -d lib"
   },
   "keywords": [
     "tdd",
@@ -17,6 +17,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
     "chai": "^4.1.2",
     "mocha": "^4.0.1"
   }
