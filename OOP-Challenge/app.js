@@ -59,3 +59,5 @@ class SmartPhones extends Mobile {
         return this._browsers;
     }
 }
+
+export { Mobile, SmartPhones };
