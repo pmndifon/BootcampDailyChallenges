@@ -1,86 +1,61 @@
 class Mobile {
-    constructor(name, imeiNum, processor) {
+    constructor(name, imeiNum, simSlot) {
+        // Abstraction
         this._name = name;
         this._imeiNum = imeiNum;
-        this._processor = processor;
-        this._simCard = 1;
+        this._simSlot = simSlot;
+        this._batteryLife = 100;
     }
 
     dial() {
-        return "Dialing number";
+        this.batteryLife = Math.floor(Math.random() * 50 + 1);
+        return `${this.name} Caling! Battery life is now ${this.batteryLife} percent`;
     }
 
-    receiveMsg() {
-        return "Message received";
+    shareFile() {
+        return 'File sharing with bluetooth';
     }
 
-    sendMsg() {
-        return "Sending Message via text";
+    set batteryLife(value) {
+        this._batteryLife -= value;
+    }
+
+    get batteryLife() {
+        return (this._batteryLife <= 0) ? `0 Percent! Phone is dead! Please charge it!` : this._batteryLife;
     }
 
     get name() {
-        return this.name;
-    }
-
-    get imeiNum() {
-        return this.imeiNum;
-    }
-
-    get processor() {
-        return this._processor;
-    }
-
-    set processor(processorName) {
-        this._processor = processorName;
+        return this._name;
     }
 }
 
 
-// Inheritance
+// Inheritance is at play here
 class SmartPhones extends Mobile {
-    constructor(name, imeiNum, connectivity) {
-        super(name, imeiNum);
-        this._connectivity = connectivity;
-        this._wifi = false;
+    constructor(name, imeiNum, batteryLife, camera) {
+        super(name, imeiNum, batteryLife);
+        this._camera = camera;
+        this._browsers = ['Chrome'];
     }
 
-    // Polymorphism
-    sendMsg() {
-        return `Sending message via ${this._connectivity}`;
+    // Browser method
+    browse() {
+        this.batteryLife = Math.floor(Math.random() * 80 + 1);
+        return `${this.name} browsing! Battery life now ${this.batteryLife} percent`;
     }
 
-    set wifi(hasWifi) {
-        this._wifi = hasWifi;
+    // File sharing method
+    shareFile() {
+        return 'File Sharing with wifi';
     }
 
-    get wifi() {
-        return this._wifi;
+    // Setter methods
+    set browsers(browserName) {
+        this._browsers.push(browserName);
     }
 
+    // Getter methods
+    get browsers() {
+        return this._browsers;
+    }
 }
-
-// Abstraction
-let SamsungG6 = new Mobile("Samusung G6", 12233874073900, "Intel Phi-Atom", 2);
-let iPhone6 = new SmartPhones("iPhone 6", 103383002798, "bluetooth");
-
-export { SamsungG6, iPhone6}; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
