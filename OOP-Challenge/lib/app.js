@@ -48,7 +48,7 @@ var MobilePhone = function () {
             return this._name;
         }
     }, {
-        key: 'slimSlot',
+        key: 'simSlot',
         get: function get() {
             return this._slimSlot;
         }
@@ -60,8 +60,8 @@ var MobilePhone = function () {
 // Inheritance is at play here
 
 
-var SmartPhone = function (_Mobile) {
-    _inherits(SmartPhone, _Mobile);
+var SmartPhone = function (_MobilePhone) {
+    _inherits(SmartPhone, _MobilePhone);
 
     function SmartPhone(name, imeiNum, batteryLife, camera) {
         _classCallCheck(this, SmartPhone);
@@ -107,7 +107,7 @@ var SmartPhone = function (_Mobile) {
     }]);
 
     return SmartPhone;
-}(Mobile);
+}(MobilePhone);
 
 exports.MobilePhone = MobilePhone;
 exports.SmartPhone = SmartPhone;

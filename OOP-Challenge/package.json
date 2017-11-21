@@ -4,7 +4,7 @@
   "description": "Model a Real World Scenario Using OOP",
   "main": "app.js",
   "scripts": {
-    "test": "mocha tests/test.js",
+    "test": "mocha lib/test.js",
     "build": "babel src tests -d lib"
   },
   "keywords": [

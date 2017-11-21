@@ -28,14 +28,14 @@ class MobilePhone {
         return this._name;
     }
 
-    get slimSlot() {
+    get simSlot() {
         return this._slimSlot;
     }
 }
 
 
 // Inheritance is at play here
-class SmartPhone extends Mobile {
+class SmartPhone extends MobilePhone {
     constructor(name, imeiNum, batteryLife, camera) {
         super(name, imeiNum, batteryLife);
         this._camera = camera;
