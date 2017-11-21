@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha test.js",
-    "build": "build app.js test/text.js -d lib"
+    "build": "build app.js tests/test.js -d lib"
   },
   "keywords": [
     "tdd",
