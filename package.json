@@ -1,0 +1,31 @@
+{
+  "name": "tdd-words-occurence",
+  "version": "1.0.0",
+  "description": "Function that checks the occurence of words in a string. Test Driven",
+  "main": "src/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmndifon/BootcampDailyChallenges.git"
+  },
+  "keywords": [
+    "TDD",
+    "JavaScript"
+  ],
+  "author": "Patrick Ndifon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pmndifon/BootcampDailyChallenges/issues"
+  },
+  "homepage": "https://github.com/pmndifon/BootcampDailyChallenges#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
