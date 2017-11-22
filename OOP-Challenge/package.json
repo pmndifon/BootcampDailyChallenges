@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Model a Real World Scenario Using OOP",
   "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "mocha lib/test.js",
     "build": "babel src tests -d lib"

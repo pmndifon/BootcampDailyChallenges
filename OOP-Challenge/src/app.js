@@ -1,5 +1,10 @@
-class MobilePhone {
+export default class MobilePhone {
     constructor(name, imeiNum, simSlot) {
+
+        if (typeof (name) !== 'string') {
+            this.error = 'invalid input';
+        }
+        
         // Abstraction
         this._name = name;
         this._imeiNum = imeiNum;
@@ -21,11 +26,15 @@ class MobilePhone {
     }
 
     get batteryLife() {
-        return (this._batteryLife <= 0) ? `0 Percent! Phone is dead! Please charge it!` : this._batteryLife;
+        return (this._batteryLife <= 0) ? 0 : this._batteryLife;
     }
 
     get name() {
         return this._name;
+    }
+
+    get imeiNum() {
+        return this._imeiNum;
     }
 
     get simSlot() {
@@ -64,4 +73,4 @@ class SmartPhone extends MobilePhone {
     }
 }
 
-export { MobilePhone, SmartPhone };
+export { SmartPhone };
